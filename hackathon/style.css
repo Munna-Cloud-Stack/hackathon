@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input, textarea {
+    margin: 5px;
+    padding: 8px;
+    width: 250px;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 10px;
+    background: #0055ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #003ecc;
+  }
+  
+  #attendance-list, #timetable-display {
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+  }
+  

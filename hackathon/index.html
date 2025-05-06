@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartStudy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-800 to-blue-600 min-h-screen p-6 text-white">
+  <div class="max-w-xl mx-auto bg-white/10 p-6 rounded-2xl shadow-xl backdrop-blur text-white">
+    <h1 class="text-3xl font-bold text-center mb-6">📚 SmartStudy</h1>
+
+    <!-- Auth Section -->
+    <div id="auth-section" class="space-y-4">
+      <input id="email" type="email" placeholder="Email" class="w-full p-3 rounded-lg text-black" />
+      <input id="password" type="password" placeholder="Password" class="w-full p-3 rounded-lg text-black" />
+      <div class="flex space-x-2">
+        <button onclick="login()" class="bg-blue-500 hover:bg-blue-700 w-full p-3 rounded-lg">Login</button>
+        <button onclick="signup()" class="bg-green-500 hover:bg-green-700 w-full p-3 rounded-lg">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- App Section -->
+    <div id="app-section" class="hidden mt-6 space-y-6">
+      <button onclick="logout()" class="bg-red-500 hover:bg-red-700 w-full p-3 rounded-lg">Logout</button>
+
+      <!-- Attendance Tracker -->
+      <div>
+        <h2 class="text-xl font-semibold mb-2">🎓 Attendance Tracker</h2>
+        <input id="subject" placeholder="Subject" class="w-full p-2 mb-2 text-black rounded-lg" />
+        <input id="present" type="number" placeholder="Classes Attended" class="w-full p-2 mb-2 text-black rounded-lg" />
+        <input id="total" type="number" placeholder="Total Classes" class="w-full p-2 mb-2 text-black rounded-lg" />
+        <button onclick="saveAttendance()" class="bg-purple-600 hover:bg-purple-800 w-full p-2 rounded-lg">Save Attendance</button>
+        <div id="attendance-list" class="mt-3 space-y-2 text-sm"></div>
+      </div>
+
+      <!-- Timetable Manager -->
+      <div>
+        <h2 class="text-xl font-semibold mb-2">📅 Timetable Manager</h2>
+        <textarea id="timetable" rows="3" class="w-full p-2 rounded-lg text-black mb-2" placeholder="Mon: Math, Tue: Physics..."></textarea>
+        <button onclick="saveTimetable()" class="bg-yellow-500 hover:bg-yellow-700 w-full p-2 rounded-lg">Save Timetable</button>
+        <div id="timetable-display" class="mt-3 text-sm"></div>
+      </div>
+
+ 
+  <!-- Study Planner -->
+<div>
+    <h2 class="text-xl font-semibold mb-2">📝 Study Planner</h2>
+    <input id="task-subject" type="text" placeholder="Subject" class="w-full p-2 mb-2 text-black rounded-lg" />
+    <input id="task-deadline" type="date" class="w-full p-2 mb-2 text-black rounded-lg" />
+    <button onclick="addTask()" class="bg-pink-500 hover:bg-pink-700 w-full p-2 rounded-lg">Add Task</button>
+    <div id="task-list" class="mt-3 space-y-2 text-sm"></div>
+  </div>
+
+</div>
+</div>
+  
+
+  <!-- Firebase and JS -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
